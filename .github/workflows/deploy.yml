@@ -19,7 +19,7 @@ jobs:
 
       - name: List MauiApp1 Directory Contents
         run: dir
-        working-directory: ${{ github.workspace }}\MauiApp1
+        working-directory: ${{ github.workspace }}\InventorySystemWithAction
 
       - name: List ManagementSystem Directory Contents
         run: dir
