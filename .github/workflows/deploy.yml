@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: List Directory
         run: dir
-        working-directory: MauiApp1\ManagementSystem
+        working-directory: MauiApp1
 
       - name: Checkout
         uses: actions/checkout@v3
