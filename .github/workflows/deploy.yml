@@ -27,25 +27,25 @@ steps:
 
 
 
-      - name: Checkout
-        uses: actions/checkout@v3
+  - name: Checkout
+    uses: actions/checkout@v3
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 8.0.x
+  - name: Setup .NET
+    uses: actions/setup-dotnet@v3
+    with:
+      dotnet-version: 8.0.x
 
-      - name: Install MAUI Workload
-        run: dotnet workload install maui
+  - name: Install MAUI Workload
+    run: dotnet workload install maui
 
-      - name: Restore
-        run: dotnet restore
-        working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
+  - name: Restore
+    run: dotnet restore
+    working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
 
-      - name: Build
-        run: dotnet build -c Release -f net8.0-windows10.0.19041.0
-        working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
+  - name: Build
+    run: dotnet build -c Release -f net8.0-windows10.0.19041.0
+    working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
 
-      - name: Publish
-        run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
-        working-directory: MauiApp1/bin/Release
+  - name: Publish
+    run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
+    working-directory: MauiApp1/bin/Release
