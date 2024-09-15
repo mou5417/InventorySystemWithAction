@@ -5,7 +5,8 @@ on:
       - main
 env:
   DOTNET_VERSION: "8.0"
-  WINDOWS_TARGET: "net8.0-windows10.0.19041.0"
+  WINDOWS_TARGET: "net8.0-windows10.0.19041.0 win-64"
+  RUNTIME_IDENTIFIER: "win-x64"
   PROJECT_FILE: "./MauiApp1/InventorySystem.csproj"
 
 jobs:
