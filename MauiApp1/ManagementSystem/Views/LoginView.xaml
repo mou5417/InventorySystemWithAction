@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManagementSystem.Views.LoginView"
+             xmlns:vm="clr-namespace:ManagementSystem.ViewModels"
+             x:DataType="vm:LoginViewModel"
+             Shell.NavBarIsVisible="False"
+             Title="loginPage">
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+        <VerticalStackLayout Spacing="5">
+            <Label FontSize="28"
+                    Text="Welcome to logainPage"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" TextColor="Gray" />
+            <Label FontSize="18" Text="登入帳號" TextColor="Gray" HorizontalOptions="Center"></Label>
+            <StackLayout Orientation="Horizontal" >
+                <Entry x:Name="UserName" Placeholder="Enter UserName" Text="{Binding Username}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Entry x:Name="PassWord" Placeholder="Enter PassWord" IsPassword="True" Text="{Binding Password}"/>
+            </StackLayout>
+            <Button Text="登入" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" Command="{Binding LoginCommand}"></Button>
+        </VerticalStackLayout>
+     
+
+    </VerticalStackLayout>
+</ContentPage>

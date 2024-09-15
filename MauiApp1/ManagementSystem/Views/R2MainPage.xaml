@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ManagementSystem.Controls"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:ManagementSystem.ViewModels"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:model="clr-namespace:Entities;assembly=Entities"
+             xmlns:local="clr-namespace:ManagementSystem.ViewModels"
+             x:DataType="local:LocationMainViewModel"
+             x:Class="ManagementSystem.Views.R2MainPage"
+             Title="R2MainPage"
+             x:Name="page">
+    <Grid RowDefinitions=".1*,.1*,.7*,.1*"
+          ColumnDefinitions=".2*,.8*">
+        <material:TabView  Grid.Row="2"
+                           Grid.Column="1">
+            <material:TabItem Title="Locations">
+                <ScrollView VerticalScrollBarVisibility="Always" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <Button Text="Add" TextColor="White" BackgroundColor="Gray" HorizontalOptions="End" WidthRequest="80" Command="{Binding GotoLocationAddCommand}"></Button>
+                    
+                        <material:DataGrid ItemsSource="{Binding ItemLocations }"
+                   UseAutoColumns="False"
+                    LineSeparatorColor="Silver" >
+                            <material:DataGrid.Columns >
+
+                                <material:DataGridColumn ValueBinding="{Binding LocationId}"
+                                 Title="Location Id" />
+                                <material:DataGridColumn ValueBinding="{Binding LocationName}"
+                                 Title="Location Name" />
+                                <material:DataGridColumn ValueBinding="{Binding LocationDetail}"
+                                 Title="Location Detail" />
+                                <material:DataGridColumn Title="Action">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemLocation">
+                                            <Button Text="Remove"
+    Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteLocationAsyncCommand}"
+    CommandParameter="{Binding LocationId}"
+   Margin="5" WidthRequest="80" HorizontalOptions="Center"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                                <material:DataGridColumn Title="Edit">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemLocation">
+                                            <Button Text="Edit"
+Command="{Binding Source={x:Reference page},Path=BindingContext.GotoLocationEditCommand}" CommandParameter="{Binding LocationId} " Margin="5"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                            </material:DataGrid.Columns>
+                        </material:DataGrid>
+                   
+                </VerticalStackLayout>
+                </ScrollView>
+            </material:TabItem>
+            <material:TabItem Title="設備">
+                <ScrollView VerticalScrollBarVisibility="Always" VerticalOptions="FillAndExpand">
+                    <VerticalStackLayout>
+                        <Button Text="Add" TextColor="White" BackgroundColor="Gray" HorizontalOptions="End" WidthRequest="80" Command="{Binding GotoItemAddCommand}"></Button>
+
+                        <material:DataGrid ItemsSource="{Binding Items }"
+                   UseAutoColumns="False"
+                    LineSeparatorColor="Silver" >
+                            <material:DataGrid.Columns >
+
+                                <material:DataGridColumn x:Name="ItemIdColumn" ValueBinding="{Binding ItemId }"
+                                 Title="設備編號" />
+                                <material:DataGridColumn ValueBinding="{Binding ItemName}"
+                                 Title="設備編號" />
+                                <material:DataGridColumn ValueBinding="{Binding LocationName}"
+                                 Title="設備位置" />
+                                <material:DataGridColumn ValueBinding="{Binding Status}" Title="設備狀態"/>
+                                <material:DataGridColumn Title="Action">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemModelForUI">
+                                            <Button Text="Remove"
+    Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteItemAsyncCommand}"
+    CommandParameter="{Binding ItemId }"
+   Margin="5" WidthRequest="80" HorizontalOptions="Center"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                                <material:DataGridColumn Title="Edit">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemModelForUI">
+                                            <Button Text="Edit"
+Command="{Binding Source={x:Reference page},Path=BindingContext.GotoItemEditCommand}" CommandParameter="{Binding ItemId }" Margin="5"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                            </material:DataGrid.Columns>
+                        </material:DataGrid>
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </material:TabItem>
+          
+        </material:TabView>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>

@@ -1,0 +1,50 @@
+name: "Build and Deploy .NET MAUI App"
+on:
+  push:
+    branches:
+      - main
+env:
+  DOTNET_VERSION: "8.0"
+  WINDOWS_TARGET: "net8.0-windows10.0.19041.0"
+  PROJECT_FILE: "./MauiApp1/InventorySystem.csproj"
+
+jobs:
+  continuous-integration:
+    runs-on: windows-latest
+    name: Continuous Integration
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Install .NET MAUI
+        run: dotnet workload install maui --ignore-failed-sources
+      - name: Save build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: ./MauiApp1/bin/Debug
+
+  continuous-deployment-windows:
+    runs-on: windows-latest
+    needs: continuous-integration
+    name: Continuous Deployment (Windows)
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Install .NET MAUI
+        run: dotnet workload install maui --ignore-failed-sources
+      - name: Build Windows
+        run: dotnet build -f ${{ env.WINDOWS_TARGET }} --configuration Release ${{ env.PROJECT_FILE }}
+      - name: Save build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-output
+          path: ./MauiApp1/bin/Release

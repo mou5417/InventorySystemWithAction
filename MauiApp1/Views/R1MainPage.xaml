@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="controls"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:InvetorySystem.ViewModels"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:model="clr-namespace:Models;assembly=Models"
+             x:DataType="vm:LocationMainViewModel"         
+             x:Class="InventorySystem.Views.R1MainPage"
+             Title="R1MainPage"
+             x:Name="page">
+    <Grid RowDefinitions=".1*,.1*,.7*,.1*"
+          ColumnDefinitions=".2*,.8*">
+        <material:TabView  Grid.Row="2"
+                           Grid.Column="1">
+            <material:TabItem Title="Locations">
+                <ScrollView VerticalScrollBarVisibility="Always" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <Button Text="Add" TextColor="White" BackgroundColor="Gray" HorizontalOptions="End" WidthRequest="80" Command="{Binding GotoAddCommand}"></Button>
+                    
+                        <material:DataGrid ItemsSource="{Binding ItemLocations }"
+                   UseAutoColumns="False"
+                    LineSeparatorColor="Silver" >
+                            <material:DataGrid.Columns >
+
+                                <material:DataGridColumn ValueBinding="{Binding Id}"
+                                 Title="Location Id" />
+                                <material:DataGridColumn ValueBinding="{Binding Name}"
+                                 Title="Location Name" />
+                                <material:DataGridColumn ValueBinding="{Binding LocationDetail}"
+                                 Title="Location Detail" />
+                                <material:DataGridColumn Title="Action">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemLocation">
+                                            <Button Text="Remove"
+    Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteAsyncCommand}"
+    CommandParameter="{Binding Id }"
+   Margin="5" WidthRequest="80" HorizontalOptions="Center"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                                <material:DataGridColumn Title="Edit">
+                                    <material:DataGridColumn.CellItemTemplate>
+                                        <DataTemplate x:DataType="model:ItemLocation">
+                                            <Button Text="Edit"
+Command="{Binding Source={x:Reference page},Path=BindingContext.GOtoEditCommand}" CommandParameter="{Binding Id}" Margin="5"/>
+                                        </DataTemplate>
+                                    </material:DataGridColumn.CellItemTemplate>
+                                </material:DataGridColumn>
+                            </material:DataGrid.Columns>
+                        </material:DataGrid>
+                   
+                </VerticalStackLayout>
+                </ScrollView>
+            </material:TabItem>
+            <material:TabItem Title="Tab Two">
+                <material:TabItem.ContentTemplate>
+                    <DataTemplate>
+                        <Label Text="Second Tab" />
+                    </DataTemplate>
+                </material:TabItem.ContentTemplate>
+            </material:TabItem>
+            <material:TabItem Title="Tab Three">
+                <material:TabItem.ContentTemplate>
+                    <DataTemplate>
+                        <Label Text="Third Tab" />
+                    </DataTemplate>
+                </material:TabItem.ContentTemplate>
+            </material:TabItem>
+        </material:TabView>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ManagementSystem.ViewModels"
+             xmlns:model="clr-namespace:Entities;assembly=Entities"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             x:DataType="vm:ItemViewModel"
+             x:Class="ManagementSystem.Controls.ItemControl"
+             Title="">
+    <VerticalStackLayout >
+        <Label Text="設備名稱"
+        HorizontalOptions="Center"
+        Padding="10"></Label>
+        <Entry Placeholder="設備名稱" Text="{Binding TempDataItem.ItemName,Mode=TwoWay}" Margin="10"
+           HorizontalOptions="Center" x:Name="entryItemName" WidthRequest="200"></Entry>
+        <Label Text="發票號碼"
+        HorizontalOptions="Center"
+        Padding="10"></Label>
+        <Entry Placeholder="發票號碼" 
+        Text="{Binding TempDataItem.PurchaseId,Mode=TwoWay}"
+        Margin="10"
+        HorizontalOptions="Center"
+        x:Name="entryInvoiceNumber"
+        WidthRequest="200">
+        </Entry>
+        
+        <material:Dropdown ItemsSource="{Binding Status}" SelectedItem="{Binding SelectedStatus, Mode=TwoWay}" Placeholder="設備狀態" HorizontalOptions="Center"/>
+
+        <material:Dropdown ItemsSource="{Binding DrpLocation}" SelectedItem="{Binding SelectedLocation, Mode=TwoWay}" Placeholder="所在地點" HorizontalOptions="Center" Margin="20,10" x:Name="entrylocationName"/>
+        <Label Text="細項"
+        Padding="10"></Label>
+        <Editor Text="{Binding TempDataItem.Description,Mode=TwoWay}"
+        Placeholder="細項"
+        HeightRequest="150"
+        WidthRequest="200"
+        Margin="50,10"
+     />
+
+        <Button Text="Save"
+            Background="Black"
+            TextColor="White"
+            WidthRequest="80"
+            x:Name="btnSave"
+            Padding="5"
+            Command="{Binding AddItemCommand}">
+        </Button>
+        <Button Text="Cancel" 
+                Padding="5"
+                Background="Black"
+                TextColor="White"
+                Margin="5"
+                WidthRequest="80"
+                Command="{Binding CancelCommand }">
+        </Button>
+    </VerticalStackLayout>
+</ContentView>

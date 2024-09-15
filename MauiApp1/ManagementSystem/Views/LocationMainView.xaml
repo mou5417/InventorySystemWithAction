@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ManagementSystem.ViewModels"
+             xmlns:model="clr-namespace:Entities;assembly=Entities"
+             x:DataType="vm:LocationMainViewModel"
+             x:Class="ManagementSystem.Views.LocationMainView"
+             Title="LocationMainView"  BackgroundColor="Gray" WidthRequest="400" >
+    <VerticalStackLayout>
+        <CollectionView ItemsSource="{Binding ItemLocations }" HorizontalOptions="Center" x:Name="Collection" x:DataType="vm:LocationMainViewModel" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:ItemLocation">
+                    
+                   <Frame CornerRadius="10" BorderColor="Silver" Padding="10" >
+                        <Grid Padding="10" HorizontalOptions="Center" >
+                            <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                         </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                        
+                            <Label Grid.Column="0"
+                                   Grid.Row="1"
+                               Text="{Binding LocationId}"
+                               FontAttributes="Bold" VerticalOptions="Center" Margin="20" />
+                            <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Text="{Binding LocationName}"
+                               FontAttributes="Italic"
+                               VerticalOptions="Center" HorizontalOptions="Center"/>
+                            
+                            <Button Text="Edit"
+                                    BackgroundColor="Gray"
+                                    Grid.Row="1"
+                                    Grid.Column="2" Padding="10" Margin="20" VerticalOptions="Center"
+                                    TextColor="White"
+                                    WidthRequest="20"
+                                    Command="{Binding Source={x:Reference Collection}, Path=BindingContext.GOtoEditCommand}"
+                                    CommandParameter="{Binding LocationId}">
+                                
+                            </Button>
+                            <Button Text="Delete"
+                                    BackgroundColor="Gray"
+                                    Grid.Row="1"
+                                    Grid.Column="3"
+                                    Padding="10"
+                                    Margin="20"
+                                    VerticalOptions="Center"
+                                    TextColor="White"
+                                    Command="{Binding Source={x:Reference Collection},           Path=BindingContext.DeleteAsyncCommand}"
+                                    CommandParameter="{Binding LocationId}"
+                                    >
+                                   
+                            </Button>
+                           
+                        </Grid>
+                    </Frame>
+                      
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add" WidthRequest="80"
+                Command="{Binding GotoLocationAddCommand}" ></Button>
+      
+                
+    </VerticalStackLayout>
+</ContentPage>

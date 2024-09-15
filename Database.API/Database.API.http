@@ -1,0 +1,6 @@
+@Database.API_HostAddress = http://localhost:5260
+
+GET {{Database.API_HostAddress}}/api/
+Accept: application/json
+
+###

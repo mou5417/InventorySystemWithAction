@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:ManagementSystem.ViewModels"
+             xmlns:model="clr-namespace:Entities;assembly=Entities"
+             x:DataType="vm:LocationViewModel"
+             x:Class="ManagementSystem.Controls.LocationControl">
+    <VerticalStackLayout >
+       
+        <Label Text="名稱"
+               HorizontalOptions="Center"
+               Padding="10"></Label>
+        <Entry Placeholder="位置名稱" 
+               Text="{Binding TempData.LocationName}"
+               Margin="10"
+               HorizontalOptions="Center"
+               x:Name="entryLocationName"
+               WidthRequest="200">
+            <Entry.Behaviors>
+                <toolkit:TextValidationBehavior x:Name="nameValidator"
+                                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                                MinimumLength="1"
+                                                IsValid="{Binding IsNameProvided}"
+                                                toolkit:MultiValidationBehavior.Error="名稱不可空白" />
+
+            </Entry.Behaviors>
+        </Entry>
+        
+        <Label 
+               TextColor="red"
+               Text="{Binding VaildateNameMsg}"></Label>
+        <Label Text="細項"
+               HorizontalOptions="Center"
+               Padding="10"></Label>
+        <Editor Text="{Binding TempData.LocationDetail}"
+                Placeholder="細項"
+                HeightRequest="250"
+                Margin="50,10"
+                />
+
+        <Button Text="Save"
+                Background="Black"
+                TextColor="White"
+                WidthRequest="80"
+                x:Name="btnSave"
+                 Padding="5"
+                Command="{Binding AddLocationCommand}"></Button>
+        <Button Text="Cancel" Padding="5"
+                Background="Black"
+                TextColor="White"
+                Margin="5"
+                WidthRequest="80"
+                Command="{Binding CancelCommand}"></Button>
+    </VerticalStackLayout>
+</ContentView>
