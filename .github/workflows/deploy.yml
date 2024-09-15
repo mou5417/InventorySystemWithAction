@@ -13,6 +13,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: List Directory
+        run: dir
+        working-directory: MauiApp1\ManagementSystem
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -26,12 +30,12 @@ jobs:
 
       - name: Restore
         run: dotnet restore
-        working-directory: ./MauiApp1/ManagementSystem/ManagementSystem.csproj
+        working-directory: MauiApp1\ManagementSystem
 
       - name: Build
         run: dotnet build -c Release -f net8.0-windows10.0.19041.0
-        working-directory: ./MauiApp1/ManagementSystem/ManagementSystem.csproj
+        working-directory: MauiApp1\ManagementSystem
 
       - name: Publish
         run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
-        working-directory: ./MauiApp1/bin/Release
+        working-directory: MauiApp1/bin/Release
