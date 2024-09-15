@@ -19,11 +19,11 @@ jobs:
 
       - name: List MauiApp1 Directory Contents
         run: dir
-        working-directory: ${{ github.workspace }}/MauiApp1
+        working-directory: ${{ github.workspace }}\MauiApp1
 
       - name: List ManagementSystem Directory Contents
         run: dir
-        working-directory: ${{ github.workspace }}/MauiApp1/ManagementSystem
+        working-directory: ${{ github.workspace }}\MauiApp1\ManagementSystem
 
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,7 +38,7 @@ jobs:
 
       - name: Restore
         run: dotnet restore
-        working-directory: MauiApp1/ManagementSystem
+        working-directory: MauiApp1\ManagementSystem
 
       - name: Build
         run: dotnet build -c Release -f net8.0-windows10.0.19041.0
@@ -46,4 +46,4 @@ jobs:
 
       - name: Publish
         run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
-        working-directory: MauiApp1/ManagementSystem
+        working-directory: MauiApp1\ManagementSystem
