@@ -13,9 +13,18 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: List Directory
-        run: dir
-        working-directory: InventorySystemWithAction
+   - name: List Root Directory Contents
+  run: dir
+  working-directory: ${{ github.workspace }}
+
+- name: List MauiApp1 Directory Contents
+  run: dir
+  working-directory: ${{ github.workspace }}/MauiApp1
+
+- name: List ManagementSystem Directory Contents
+  run: dir
+  working-directory: ${{ github.workspace }}/MauiApp1/ManagementSystem
+
 
 
       - name: Checkout
