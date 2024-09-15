@@ -12,40 +12,38 @@ jobs:
   build:
     runs-on: windows-latest
 
-steps:
-  - name: List Root Directory Contents
-    run: dir
-    working-directory: ${{ github.workspace }}
+    steps:
+      - name: List Root Directory Contents
+        run: dir
+        working-directory: ${{ github.workspace }}
 
-  - name: List MauiApp1 Directory Contents
-    run: dir
-    working-directory: ${{ github.workspace }}/MauiApp1
+      - name: List MauiApp1 Directory Contents
+        run: dir
+        working-directory: ${{ github.workspace }}/MauiApp1
 
-  - name: List ManagementSystem Directory Contents
-    run: dir
-    working-directory: ${{ github.workspace }}/MauiApp1/ManagementSystem
+      - name: List ManagementSystem Directory Contents
+        run: dir
+        working-directory: ${{ github.workspace }}/MauiApp1/ManagementSystem
 
+      - name: Checkout
+        uses: actions/checkout@v3
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
 
-  - name: Checkout
-    uses: actions/checkout@v3
+      - name: Install MAUI Workload
+        run: dotnet workload install maui
 
-  - name: Setup .NET
-    uses: actions/setup-dotnet@v3
-    with:
-      dotnet-version: 8.0.x
+      - name: Restore
+        run: dotnet restore
+        working-directory: MauiApp1/ManagementSystem
 
-  - name: Install MAUI Workload
-    run: dotnet workload install maui
+      - name: Build
+        run: dotnet build -c Release -f net8.0-windows10.0.19041.0
+        working-directory: MauiApp1/ManagementSystem
 
-  - name: Restore
-    run: dotnet restore
-    working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
-
-  - name: Build
-    run: dotnet build -c Release -f net8.0-windows10.0.19041.0
-    working-directory: MauiApp1/ManagementSystem/ManagementSystem.csproj
-
-  - name: Publish
-    run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
-    working-directory: MauiApp1/bin/Release
+      - name: Publish
+        run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
+        working-directory: MauiApp1/ManagementSystem
