@@ -61,7 +61,7 @@
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
-		<AppxPackageDir>C:\Users\moumcd\source\InventorySystem\MauiApp1\bin\New folder\</AppxPackageDir>
+		<AppxPackageDir>C:\Users\moumcd\source\InventorySystem\MauiApp1\bin\Newfolder\</AppxPackageDir>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 	</PropertyGroup>
 

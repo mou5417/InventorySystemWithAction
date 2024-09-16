@@ -12,7 +12,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowAll", o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
@@ -50,6 +50,7 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddAuthorization();
 var app = builder.Build();
+
 app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 using (var scope = app.Services.CreateScope())

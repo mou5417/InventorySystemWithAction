@@ -8,6 +8,6 @@ namespace DataStore.Webapi
 {
     public class Constant
     {
-        public const string WebApiBaseUrl = "https://localhost:5260/api";
+        public const string WebApiBaseUrl = "https://localhost:8099/api";
     }
 }
