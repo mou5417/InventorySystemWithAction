@@ -24,7 +24,10 @@ jobs:
 
       - name: Install MAUI Workload
         run: dotnet workload install maui
-
+        
+      - name: Restore dependencies
+        run: dotnet restore --force
+        
       - name: Restore
         run: dotnet restore
         working-directory: MauiApp1\ManagementSystem
