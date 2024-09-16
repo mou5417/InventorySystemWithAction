@@ -27,6 +27,7 @@ jobs:
         
       - name: Restore dependencies
         run: dotnet restore --force
+        working-directory: MauiApp1\ManagementSystem
         
       - name: Restore
         run: dotnet restore
