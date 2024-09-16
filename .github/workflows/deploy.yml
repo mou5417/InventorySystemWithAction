@@ -39,7 +39,7 @@ jobs:
 
       - name: Publish
         run: dotnet publish -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
-        working-directory: MauiApp1\bin\Newfolder\ManagementSystem_0.0.13.0_Test
+        working-directory: MauiApp1\bin\
       
       - name: Upload
         uses: actions/upload-artifact@v4
