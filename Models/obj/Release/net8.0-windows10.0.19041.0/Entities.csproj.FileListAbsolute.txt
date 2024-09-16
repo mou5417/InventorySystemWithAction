@@ -12,3 +12,4 @@ C:\Users\moumcd\source\InventorySystem\Models\obj\Release\net8.0-windows10.0.190
 C:\Users\moumcd\source\InventorySystem\Models\obj\Release\net8.0-windows10.0.19041.0\Entities.pdb
 C:\Users\moumcd\source\InventorySystem\Models\obj\Release\net8.0-windows10.0.19041.0\Entities.genruntimeconfig.cache
 C:\Users\moumcd\source\InventorySystem\Models\obj\Release\net8.0-windows10.0.19041.0\ref\Entities.dll
+C:\Users\moumcd\source\InventorySystem\Models\obj\Release\net8.0-windows10.0.19041.0\Entities.sourcelink.json
