@@ -26,14 +26,14 @@ jobs:
 
       - name: Restore NuGet Packages
         run: dotnet restore
-        working-directory: .\ManagementSystem
+        working-directory: MauiApp1\ManagementSystem\bin\Release
 
       - name: Build
         run: dotnet build -c Release -f net8.0-windows10.0.19041.0
-        working-directory: .\ManagementSystem
+        working-directory: MauiApp1\ManagementSystem\bin\Release
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Build
-          path: .\ManagementSystem\bin\Release
+          path: MauiApp1\ManagementSystem\bin\Release
