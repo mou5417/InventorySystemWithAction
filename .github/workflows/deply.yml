@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Build
-          path: MauiApp1\ManagementSystem\bin\Release
+          path: MauiApp1\ManagementSystem\bin\Release\net8.0-windows10.0.19041.0\win10-x64\AppPackages\**\*.msix
