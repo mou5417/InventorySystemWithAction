@@ -41,7 +41,7 @@ namespace ManagementSystem.ViewModels
                 catch (Exception ex)
                 {
 
-                    await DisplayLoginMsg(ex.Message);
+                    await DisplayLoginMsg(ex.InnerException.Message);
                 }
                
                 if (!string.IsNullOrEmpty(response.Token))

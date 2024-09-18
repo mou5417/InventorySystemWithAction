@@ -15,7 +15,11 @@ namespace DataStore.Webapi
         private JsonSerializerOptions _serializerOptions;
         public DataStoreWebApi()
         {
-            _httpClient = new HttpClient();
+            var handler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+            };
+            _httpClient = new HttpClient(handler);
             _serializerOptions = new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -142,18 +146,22 @@ namespace DataStore.Webapi
 
         public async Task<AuthResponseModel> Login(LoginModel loginModel)
         {
+            Uri uri = new Uri($"{Constant.WebApiBaseUrl}/login");
             try
             {
-                Uri uri = new Uri($"{Constant.WebApiBaseUrl}/login");
-                var respons = await _httpClient.PostAsJsonAsync(uri, loginModel);
-                respons.EnsureSuccessStatusCode();
-                return JsonConvert.DeserializeObject<AuthResponseModel>(await respons.Content.ReadAsStringAsync());
+                    var respons = await _httpClient.PostAsJsonAsync(uri, loginModel);
+                    respons.EnsureSuccessStatusCode();
+                    return JsonConvert.DeserializeObject<AuthResponseModel>(await respons.Content.ReadAsStringAsync());   
+                
             }
             catch (Exception ex)
             {
-                
+
+                Console.WriteLine(ex.InnerException.Message);
                 throw;
             }
+            
+
         }
 
         public async Task SetAuthToken()

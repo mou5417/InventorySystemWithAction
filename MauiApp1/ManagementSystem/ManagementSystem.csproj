@@ -54,7 +54,7 @@
 	<PropertyGroup>
 	  <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.26100.0</TargetFrameworks>
 		<PublishReadyToRun>false</PublishReadyToRun>
-	  <PackageCertificateThumbprint>8DD56C0F4BB3A4FF2527AC5FA8100C7B2D7E3F0A</PackageCertificateThumbprint>
+	  <PackageCertificateThumbprint>1B5B93C94149D151A02ADCE1818BF3C9476F2730</PackageCertificateThumbprint>
 		<OutputPath Condition="'$(Platform)' == 'x64'">bin\x64\</OutputPath>
 		<OutputPath Condition="'$(Platform)' == 'arm64'">bin\arm64\</OutputPath>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>

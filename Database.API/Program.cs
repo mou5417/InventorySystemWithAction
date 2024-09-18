@@ -7,12 +7,16 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography.Xml;
 using System.Text;
 
+//ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("AllowAll", o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
@@ -49,7 +53,18 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddAuthorization();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 var app = builder.Build();
+
 
 app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
@@ -61,7 +76,8 @@ using (var scope = app.Services.CreateScope())
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseSwagger();
+app.UseSwaggerUI();
 #region Get  data
 
 // Get List Data from database
@@ -359,7 +375,7 @@ app.MapPost("/api/login", async (LogindDto logindDto, UserManager<User> _userMan
     return Results.Ok(response);
 });
 
-app.Run();
+
 
 static  bool checkNull<T>(T obj)
 {
@@ -369,7 +385,7 @@ static  bool checkNull<T>(T obj)
     }
     return false;
 }
-
+app.Run();
 
 internal class AuthResponseDto
 {

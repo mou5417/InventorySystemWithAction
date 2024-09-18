@@ -127,6 +127,7 @@ C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.AssemblyInfoInputs.cache
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.AssemblyInfo.cs
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.csproj.CoreCompileInputs.cache
+C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.sourcelink.json
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\staticwebassets.build.json
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\staticwebassets.development.json
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\staticwebassets\msbuild.Database.API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -141,4 +142,3 @@ C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.pdb
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.genruntimeconfig.cache
 C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\ref\Database.API.dll
-C:\Users\moumcd\source\InventorySystem\Database.API\obj\Release\net8.0-windows10.0.19041.0\Database.API.sourcelink.json

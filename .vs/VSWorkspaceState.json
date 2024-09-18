@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.github",
-    "\\.github\\workflows",
-    "\\MauiApp1",
-    "\\MauiApp1\\ManagementSystem"
+    ""
   ],
-  "SelectedNode": "\\MauiApp1\\ManagementSystem\\ManagementSystem.csproj",
   "PreviewInSolutionExplorer": false
 }

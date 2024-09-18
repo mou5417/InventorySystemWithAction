@@ -7,6 +7,7 @@ C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.AssemblyInfoInputs.cache
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.AssemblyInfo.cs
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.sourcelink.json
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.dll
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\refint\Entities.dll
 C:\Users\moumcd\source\InventorySystem\Models\obj\Debug\net8.0-windows10.0.26100.0\Entities.pdb
