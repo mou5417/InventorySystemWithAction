@@ -56,7 +56,7 @@
 		<PublishReadyToRun>false</PublishReadyToRun>
 	  <PackageCertificateThumbprint>1B5B93C94149D151A02ADCE1818BF3C9476F2730</PackageCertificateThumbprint>
 		<OutputPath Condition="'$(Platform)' == 'x64'">bin\x64\</OutputPath>
-		<OutputPath Condition="'$(Platform)' == 'arm64'">bin\arm64\</OutputPath>
+		
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
