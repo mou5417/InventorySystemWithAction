@@ -29,7 +29,7 @@ jobs:
         working-directory: MauiApp1\ManagementSystem
 
       - name: Build
-        run: dotnet build -c Release -f net8.0-windows10.0.19041.0 \p:GenerateAppxPackageOnBuild=true
+        run: dotnet build -c Release -f net8.0-windows10.0.19041.0 /p:GenerateAppxPackageOnBuild=true
         working-directory: MauiApp1\ManagementSystem
 
       - name: Upload Artifact
