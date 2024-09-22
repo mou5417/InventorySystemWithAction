@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\Database.API.csproj": {}
+    "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\Database.API.csproj": {
+    "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\Database.API.csproj",
+        "projectUniqueName": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
         "projectName": "Database.API",
-        "projectPath": "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\Database.API.csproj",
+        "projectPath": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
         "packagesPath": "C:\\Users\\moumcd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\obj\\",
+        "outputPath": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -27,7 +27,6 @@
           "net8.0-windows10.0.26100.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

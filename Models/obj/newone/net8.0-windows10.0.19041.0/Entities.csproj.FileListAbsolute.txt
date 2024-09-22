@@ -1,0 +1,15 @@
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\bin\newone\net8.0-windows10.0.19041.0\Entities.deps.json
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\bin\newone\net8.0-windows10.0.19041.0\Entities.runtimeconfig.json
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\bin\newone\net8.0-windows10.0.19041.0\Entities.dll
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\bin\newone\net8.0-windows10.0.19041.0\Entities.pdb
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.csproj.AssemblyReference.cache
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.AssemblyInfoInputs.cache
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.AssemblyInfo.cs
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.sourcelink.json
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.dll
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\refint\Entities.dll
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.pdb
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\Entities.genruntimeconfig.cache
+C:\Users\moumcd\Source\Repos\mou5417\InventorySystemWithAction\Models\obj\newone\net8.0-windows10.0.19041.0\ref\Entities.dll

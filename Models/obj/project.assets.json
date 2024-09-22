@@ -3462,11 +3462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moumcd\\source\\InventorySystem\\Models\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\moumcd\\source\\InventorySystem\\Models\\Entities.csproj",
+      "projectPath": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
       "packagesPath": "C:\\Users\\moumcd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moumcd\\source\\InventorySystem\\Models\\obj\\",
+      "outputPath": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -3482,7 +3482,6 @@
         "net8.0-windows10.0.26100.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },

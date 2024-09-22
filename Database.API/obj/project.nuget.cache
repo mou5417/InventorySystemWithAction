@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4HiGA1Szn8E=",
+  "dgSpecHash": "W1NM7iE8qfU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\moumcd\\source\\InventorySystem\\Database.API\\Database.API.csproj",
+  "projectFilePath": "C:\\Users\\moumcd\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moumcd\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\moumcd\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",

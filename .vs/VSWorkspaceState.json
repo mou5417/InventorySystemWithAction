@@ -1,10 +1,5 @@
 {
-  "ExpandedNodes": [
-    "",
-    "\\.github",
-    "\\.github\\workflows",
-    "\\Database.API"
-  ],
-  "SelectedNode": "\\.github\\workflows\\deply.yml",
+  "ExpandedNodes": [],
+  "SelectedNode": "\\InventorySystem.sln",
   "PreviewInSolutionExplorer": false
 }
