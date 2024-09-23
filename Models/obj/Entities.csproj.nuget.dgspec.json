@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moumcd\\source\\repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj": {}
+    "D:\\rsop\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moumcd\\source\\repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj": {
+    "D:\\rsop\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moumcd\\source\\repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
+        "projectUniqueName": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\moumcd\\source\\repos\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
-        "packagesPath": "C:\\Users\\moumcd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moumcd\\source\\repos\\mou5417\\InventorySystemWithAction\\Models\\obj\\",
+        "projectPath": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Models\\Entities.csproj",
+        "packagesPath": "C:\\Users\\fiyon\\.nuget\\packages\\",
+        "outputPath": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\moumcd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fiyon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,6 +27,7 @@
           "net8.0-windows10.0.26100.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -95,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.26100": {
           "targetAlias": "net8.0-windows10.0.26100.0",
@@ -140,7 +141,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

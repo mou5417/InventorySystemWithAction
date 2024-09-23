@@ -37,11 +37,15 @@ namespace ManagementSystem.ViewModels
                 try
                 {
                      response = await serviceGeneric.Login(loginModel);
+                    //don't know how to pass 401 code to from service layer to here
+                
                 }
                 catch (Exception ex)
                 {
+                   
 
-                    await DisplayLoginMsg(ex.InnerException.Message);
+                    await DisplayLoginMsg(ex.Message);
+                    return;
                 }
                
                 if (!string.IsNullOrEmpty(response.Token))
@@ -79,6 +83,7 @@ namespace ManagementSystem.ViewModels
         {
             await Shell.Current.DisplayAlert("登入失敗", msg, "確認");
             Password = string.Empty;
+            Username = string.Empty;
         }
     }
 }

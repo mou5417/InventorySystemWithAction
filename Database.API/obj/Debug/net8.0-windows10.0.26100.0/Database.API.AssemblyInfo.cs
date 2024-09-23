@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Database.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1874371cfabf5e0af46c894638c74ca3f5a44c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57c8dd36b5eee3d234e2ec1592994776491c4f2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Database.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Database.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

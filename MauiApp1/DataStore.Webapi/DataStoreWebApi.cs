@@ -151,19 +151,22 @@ namespace DataStore.Webapi
             {
                     var respons = await _httpClient.PostAsJsonAsync(uri, loginModel);
                     respons.EnsureSuccessStatusCode();
-                    return JsonConvert.DeserializeObject<AuthResponseModel>(await respons.Content.ReadAsStringAsync());   
+                if (respons.StatusCode == System.Net.HttpStatusCode.Unauthorized) return null;
+               
+                return JsonConvert.DeserializeObject<AuthResponseModel>(await respons.Content.ReadAsStringAsync());   
                 
             }
             catch (Exception ex)
             {
 
-                Console.WriteLine(ex.InnerException.Message);
+               
                 throw;
             }
             
 
         }
 
+        
         public async Task SetAuthToken()
         {
             var token = await SecureStorage.GetAsync("Token");
