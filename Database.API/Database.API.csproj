@@ -5,7 +5,7 @@
 	  <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <OutputType>WinExe</OutputType>
-    <Configurations>Debug;Release;newone</Configurations>
+    <Configurations>Debug;Release;newone;NewDebug</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -52,7 +52,7 @@
     <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
     <PackageReference Include="Serilog.Sinks.EventLog" Version="4.0.0" />
-    <PackageReference Include="SwashBuckle.AspNetCore" Version="6.7.3" />
+    <PackageReference Include="SwashBuckle.AspNetCore" Version="6.8.0" />
  
   </ItemGroup>
 

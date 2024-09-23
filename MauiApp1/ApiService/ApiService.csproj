@@ -11,7 +11,7 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 
-		<Configurations>Debug;Release;newone</Configurations>
+		<Configurations>Debug;Release;newone;NewDebug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>

@@ -12,7 +12,7 @@
 		<SkipValidateMauiImplicitPackageReferences>
 			true
 		</SkipValidateMauiImplicitPackageReferences>
-		<Configurations>Debug;Release;newone</Configurations>
+		<Configurations>Debug;Release;newone;NewDebug</Configurations>
 	</PropertyGroup>
 
 	<ItemGroup>

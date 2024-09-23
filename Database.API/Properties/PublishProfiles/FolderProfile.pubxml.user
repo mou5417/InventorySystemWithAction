@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\moumcd\source\InventorySystem\Database.API\bin\Release\net8.0-windows10.0.19041.0\publish\</_PublishTargetUrl>
-    <History>True|2024-09-18T06:13:49.9055720Z||;False|2024-09-18T14:13:02.8118177+08:00||;</History>
+    <_PublishTargetUrl>C:\Users\fiyon\source\repos\mou5417\InventorySystemWithAction\Database.API\bin\Release\net8.0-windows10.0.19041.0\publish\</_PublishTargetUrl>
+    <History>True|2024-09-23T10:49:26.0687704Z||;True|2024-09-18T14:13:49.9055720+08:00||;False|2024-09-18T14:13:02.8118177+08:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

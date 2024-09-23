@@ -3,8 +3,10 @@
 	<PropertyGroup>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">net8.0-windows10.0.19041.0;net8.0-windows10.0.26100.0</TargetFrameworks>
 
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
 
 
+		<TargetFrameworks>net8.0-maccatalyst;net8.0-android;net8.0-ios</TargetFrameworks>
 		<!--TargetFrameworks>net8.0-maccatalyst;net8.0-android;net8.0-ios</TargetFrameworks-->
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
@@ -15,8 +17,8 @@
 		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
 		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
-
-		<OutputType>Exe</OutputType>
+		<PackageCertificateThumbprint>E6FC46C8C692ACA50CBA1C0246658FB5EE41D215</PackageCertificateThumbprint>
+		<OutputType>WinExe</OutputType>
 		<!--DebugType>none</DebugType-->
 		<RootNamespace>ManagementSystem</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -35,9 +37,9 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		
-		<Platforms>AnyCPU;ARM64;x86;x64</Platforms>
+		<Platforms>x86;x64</Platforms>
 		
-		<Configurations>Debug;Release;newone</Configurations>
+		<Configurations>Debug;Release;newone;NewDebug</Configurations>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -51,7 +53,7 @@
 	<PropertyGroup>
 	  <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.26100.0</TargetFrameworks>
 		<PublishReadyToRun>false</PublishReadyToRun>
-	  <PackageCertificateThumbprint>1B5B93C94149D151A02ADCE1818BF3C9476F2730</PackageCertificateThumbprint>
+
 		<OutputPath Condition="'$(Platform)' == 'x64'">bin\x64\</OutputPath>
 		
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>

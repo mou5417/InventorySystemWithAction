@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\rsop\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {}
+    "C:\\Users\\fiyon\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {}
   },
   "projects": {
-    "D:\\rsop\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {
+    "C:\\Users\\fiyon\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
+        "projectUniqueName": "C:\\Users\\fiyon\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
         "projectName": "Database.API",
-        "projectPath": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
+        "projectPath": "C:\\Users\\fiyon\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\Database.API.csproj",
         "packagesPath": "C:\\Users\\fiyon\\.nuget\\packages\\",
-        "outputPath": "D:\\rsop\\mou5417\\InventorySystemWithAction\\Database.API\\obj\\",
+        "outputPath": "C:\\Users\\fiyon\\Source\\Repos\\mou5417\\InventorySystemWithAction\\Database.API\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -122,7 +122,7 @@
             },
             "SwashBuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.3, )"
+              "version": "[6.8.0, )"
             }
           },
           "imports": [
@@ -224,7 +224,7 @@
             },
             "SwashBuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.7.3, )"
+              "version": "[6.8.0, )"
             }
           },
           "imports": [
