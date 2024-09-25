@@ -63,6 +63,7 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
+builder.WebHost.UseKestrel();
 var app = builder.Build();
 
 
